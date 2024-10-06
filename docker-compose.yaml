@@ -7,4 +7,4 @@ services:
     working_dir: /app # Ustaw katalog roboczy na /app w kontenerze
     ports:
       - "3000:3000" # Udostępnij port 3000 na hosta
-    command: sh -c "npx create-react-app . && npm start" # Tworzenie aplikacji React i jej uruchomienie
+    command: sh -c "if [ -f package.json ]; then npm install && npm start; else npx create-react-app . && npm start; fi" # Sprawdzenie istnienia package.json
