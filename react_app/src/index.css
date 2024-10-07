@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* General App Styles */
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 600px) {
+  .app-container {
+    padding: 10px;
+  }
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.5rem; /* Adjust font size for better responsiveness */
+}
+
+.header p {
+  color: #555;
+  font-size: 0.9rem; /* Adjust font size for better responsiveness */
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-wrap:wrap;
+  gap: 15px; /* Adjust gap for better spacing */
+}
+
+@media (min-width: 768px) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* FormField Styles */
+.form-field {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 49%; /* Ensure full width on small screens */
+  border: 1px solid #737373;
+  border-radius: 10px;
+  padding: 5%;
+  align-items: center;
+}
+.form-field.wide-field{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%; /* Ensure full width on small screens */
+  border: 1px solid #737373;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.form-field label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Button Group Styles */
+.button-group {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 10px;
+}
+
+.button-group button {
+  padding: 10px;
+  flex: 1 1 100px; /* Allow buttons to grow/shrink while maintaining a minimum width */
+  max-width: 150px; /* Set a max width to prevent oversized buttons */
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 10px; /* Add border radius to buttons */
+  transition: background-color 0.3s ease;
+}
+
+.button-group .active {
+  background-color: black;
+  color: white;
+}
+
+.button-group button:hover {
+  background-color: #eee;
+}
+
+/* Input Group Styles */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-group input {
+  flex: 1; /* Allow input to fill available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 100%; /* Ensure the input does not exceed its container */
+}
+
+.input-group span {
+  color: #888;
+}
+
+/* Media Queries for Form Field */
+@media (max-width: 600px) {
+  .form-field {
+    width: 100%;
+    border: none;
+    
+  }
+
+  /* .button-group {
+    flex-direction: column;
+  } */
 }
