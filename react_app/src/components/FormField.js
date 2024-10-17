@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FormField({ label, type, value, options, onChange, unit, classes}) {
+function FormField({ label, type, value, options, onChange, unit, classes = ''}) {
   return (
     <div className={`form-field ${classes}` }>
       <label>{label}</label>

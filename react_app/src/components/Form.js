@@ -25,10 +25,11 @@ function Form() {
         options={['Male', 'Female']} 
         value={formData.sex} 
         onChange={(value) => handleInputChange('sex', value)} 
+        
       />
       <FormField 
         label="How old are you?" 
-        type="number" 
+        type="number"
         value={formData.age} 
         onChange={(value) => handleInputChange('age', value)} 
       />
@@ -52,7 +53,7 @@ function Form() {
         options={['Moderately', 'Lightly', 'Active', 'Very Active']} 
         value={formData.activityLevel} 
         onChange={(value) => handleInputChange('activityLevel', value)} 
-        classes={'wide-field'}
+        classes={'wide-field valera'}
       />
     </form>
   );
