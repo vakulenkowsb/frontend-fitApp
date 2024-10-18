@@ -3,6 +3,23 @@
 Po prukoly tymchasowo
 */
 
+/*
+18.10.2024 -> Vitalik added comment 
+
+назови ті всі змінні іменами які не будуть містити назви кольорів в собі....
+
+Бо якшо захочемо поміняти кольори в аплікації, то потім не буде непоняток.....
+
+краще назви ті всі кольори тіпа так:
+
+--primary-color: ... ;
+--secondary-color: ... ;
+--tertiary-color: ...;
+і так далі
+
+бо якшо буде так як зараз то прийдеться змінювати потім вставлені змінні в усьому коді(бо якшо буде --dark-green а ти захочеш поміняти саме в тих місцях де він вживається всьо на якийсь інший то буде сильна плутанина) 
+а якшо заміниш назви, то зможеш замінити тільки значення, а назва буде та сама
+*/
 :root {
   --dark-green: rgba(37, 66, 34, 1);
   --light-green: rgba(153, 204, 102, 1);
@@ -62,6 +79,10 @@ select {
 /*
   7. Avoid text overflows
 */
+a{
+  color: white;
+  text-decoration: none;
+}
 p,
 h1,
 h2,
@@ -81,6 +102,9 @@ h6 {
 }
 
 /* General App Styles */
+.container{
+  max-width: 1440px;
+}
 
 .app-container {
   min-height: 100svh;
@@ -89,9 +113,27 @@ h6 {
 }
 
 /* Header Styles */
+
+/*
+18.10.2024 -> Vitalik added comment 
+
+you can check the HTML structure and code of header in -> ./components/structure/RenderNavigation.js -> RenderHeader component
+
+*/
+
+
 .header {
   text-align: center;
-  margin: 1.5rem;
+  padding: 1.5rem;
+  color: var(--white);
+  background-color: var(--dark-green);
+}
+
+.header_inner{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: end;
 }
 
 .header h1 {
@@ -105,9 +147,9 @@ h6 {
 }
 
 /* Form Styles */
-.form {
+/* .form {
 
-}
+} */
 
 /* FormField Styles */
 .form-field {

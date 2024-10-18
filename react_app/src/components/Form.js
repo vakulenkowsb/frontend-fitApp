@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useDebugValue, useEffect, useState } from 'react';
 import FormField from './FormField';
 
 function Form() {
@@ -15,8 +15,11 @@ function Form() {
       ...formData,
       [name]: value
     });
+    console.log(JSON.stringify(formData))
   };
-
+  // useEffect(()=>{
+  //   console.log(formData)
+  // }, [formData])
   return (
     <form className="form">
       <FormField 
@@ -25,11 +28,10 @@ function Form() {
         options={['Male', 'Female']} 
         value={formData.sex} 
         onChange={(value) => handleInputChange('sex', value)} 
-        
       />
       <FormField 
         label="How old are you?" 
-        type="number"
+        type="number" 
         value={formData.age} 
         onChange={(value) => handleInputChange('age', value)} 
       />
@@ -53,7 +55,7 @@ function Form() {
         options={['Moderately', 'Lightly', 'Active', 'Very Active']} 
         value={formData.activityLevel} 
         onChange={(value) => handleInputChange('activityLevel', value)} 
-        classes={'wide-field valera'}
+        classes={'wide-field'}
       />
     </form>
   );
