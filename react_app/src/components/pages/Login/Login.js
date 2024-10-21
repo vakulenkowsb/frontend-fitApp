@@ -73,7 +73,7 @@ export const Login = () => {
                     <button type="submit" className="login-button" onClick={doLogin}>Login</button>
 
                     <p className="signup-text">
-                    Don’t have an account? <a href="#" className="signup-link">Sign In</a>
+                    Don’t have an account? <a href="/signup" className="signup-link">Sign Up</a>
                     </p>
 
                     {/* Functional item */}

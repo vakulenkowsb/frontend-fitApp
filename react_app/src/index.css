@@ -104,6 +104,7 @@ h6 {
 /* General App Styles */
 .container{
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .app-container {

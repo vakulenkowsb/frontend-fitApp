@@ -1,76 +1,64 @@
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f9fa;
-  }
-  
-  .profile-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .profile-photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .upload-link {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #888;
-    cursor: pointer;
-  }
-  
-  .profile-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .profile-details {
-    margin-bottom: 20px;
-  }
-  
-  .detail-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-  }
-  
-  .detail-label {
-    font-weight: bold;
-  }
-  
-  .edit-button {
-    background-color: #8bc34a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .edit-button:hover {
-    background-color: #7cb342;
-  }
-  
+/* Container for profile page */
+.profile-page {
+  position: relative;
+}
+
+.profile-page__inner {
+  background-color: #f9f9f9;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.profile-page__photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-page__photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-page__name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile-page__upload {
+  margin-top: 5px;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.profile-page__details {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.profile-page__details-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-page__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.profile-page__info-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid
+}
