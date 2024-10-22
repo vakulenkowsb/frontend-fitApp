@@ -103,6 +103,7 @@ const Profile = () => {
               </div>
               <div className="profile-page__info-row">
                 <span className="profile-page__label">Height</span>
+                {/* functional component */}
                 {isEditing ? (
                   <input
                     type="text"
@@ -117,6 +118,7 @@ const Profile = () => {
               </div>
               <div className="profile-page__info-row">
                 <span className="profile-page__label">Weight</span>
+                {/* functional component */}
                 {isEditing ? (
                   <input
                     type="text"
@@ -131,6 +133,7 @@ const Profile = () => {
               </div>
               <div className="profile-page__info-row">
                 <span className="profile-page__label">Age</span>
+                {/* functional component */}
                 {isEditing ? (
                   <input
                     type="text"
@@ -145,6 +148,7 @@ const Profile = () => {
               </div>
               <div className="profile-page__info-row">
                 <span className="profile-page__label">Email</span>
+                {/* functional component */}
                 {isEditing ? (
                   <input
                     type="text"
@@ -159,7 +163,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
-
+            {/* functional component */}
           {isEditing ? (
             <button className="profile-page__save-button" onClick={handleSaveClick}>
               Save
