@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useDebugValue, useEffect, useState } from 'react';
 import FormField from './FormField';
 
 function Form() {
@@ -15,8 +15,11 @@ function Form() {
       ...formData,
       [name]: value
     });
+    console.log(JSON.stringify(formData))
   };
-
+  // useEffect(()=>{
+  //   console.log(formData)
+  // }, [formData])
   return (
     <form className="form">
       <FormField 
