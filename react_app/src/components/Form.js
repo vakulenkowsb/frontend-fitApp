@@ -61,9 +61,12 @@ function Form() {
         onChange={(value) => handleInputChange('activityLevel', value)} 
         classes={'wide-field'}
       />
-      <button type='submit' onClick={handleFormSubmit}>
-        calculate
-      </button>
+      <FormField classes='button-container'> 
+        <button className='calculate-button' type='submit' onClick={handleFormSubmit}>
+          calculate
+        </button>
+      </FormField>
+      
     </form>
   );
 }
