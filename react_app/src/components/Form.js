@@ -63,7 +63,7 @@ function Form() {
       />
       <FormField classes='button-container'> 
         <button className='calculate-button' type='submit' onClick={handleFormSubmit}>
-          calculate
+          Calculate
         </button>
       </FormField>
       

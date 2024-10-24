@@ -67,115 +67,117 @@ const Profile = () => {
   };
 
   if (loading) {
-    return <Loader/>; // Show a loading state while fetching profile data
+    return <Loader />; // Show a loading state while fetching profile data
   }
 
   return (
-    <div className="profile-page">
-      <Container>
-        <div className="profile-page__inner">
-          <div className="profile-page__photo-section">
-            <img
-              src="https://via.placeholder.com/150" // Replace with actual image path
-              alt="Profile"
-              className="profile-page__photo"
-            />
-            <h2 className="profile-page__name">{profileData.name}</h2>
-            <button className="profile-page__upload">Upload new photo</button>
-          </div>
+    <main>
+      <div className="profile-page">
+        <Container>
+          <div className="profile-page__inner">
+            <div className="profile-page__photo-section">
+              <img
+                src="https://via.placeholder.com/150" // Replace with actual image path
+                alt="Profile"
+                className="profile-page__photo"
+              />
+              <h2 className="profile-page__name">{profileData.name}</h2>
+              <button className="profile-page__upload">Upload new photo</button>
+            </div>
 
-          <div className="profile-page__details">
-            <h3 className="profile-page__details-title">Profile</h3>
-            <div className="profile-page__info">
-              <div className="profile-page__info-row">
-                <span className="profile-page__label">Gender</span>
-                {isEditing ? (
-                  <input
-                    type="text"
-                    name="sex"
-                    value={profileData.gender}
-                    onChange={handleInputChange}
-                    className="profile-page__input"
-                  />
-                ) : (
-                  <span className="profile-page__value">{profileData.sex}</span>
-                )}
-              </div>
-              <div className="profile-page__info-row">
-                <span className="profile-page__label">Height</span>
-                {/* functional component */}
-                {isEditing ? (
-                  <input
-                    type="text"
-                    name="height"
-                    value={profileData.height}
-                    onChange={handleInputChange}
-                    className="profile-page__input"
-                  />
-                ) : (
-                  <span className="profile-page__value">{profileData.height}</span>
-                )}
-              </div>
-              <div className="profile-page__info-row">
-                <span className="profile-page__label">Weight</span>
-                {/* functional component */}
-                {isEditing ? (
-                  <input
-                    type="text"
-                    name="weight"
-                    value={profileData.weight}
-                    onChange={handleInputChange}
-                    className="profile-page__input"
-                  />
-                ) : (
-                  <span className="profile-page__value">{profileData.weight}</span>
-                )}
-              </div>
-              <div className="profile-page__info-row">
-                <span className="profile-page__label">Age</span>
-                {/* functional component */}
-                {isEditing ? (
-                  <input
-                    type="text"
-                    name="years"
-                    value={profileData.age}
-                    onChange={handleInputChange}
-                    className="profile-page__input"
-                  />
-                ) : (
-                  <span className="profile-page__value">{profileData.years}</span>
-                )}
-              </div>
-              <div className="profile-page__info-row">
-                <span className="profile-page__label">Email</span>
-                {/* functional component */}
-                {isEditing ? (
-                  <input
-                    type="text"
-                    name="email"
-                    value={profileData.email}
-                    onChange={handleInputChange}
-                    className="profile-page__input"
-                  />
-                ) : (
-                  <span className="profile-page__value">{profileData.email}</span>
-                )}
+            <div className="profile-page__details">
+              <h3 className="profile-page__details-title">Profile</h3>
+              <div className="profile-page__info">
+                <div className="profile-page__info-row">
+                  <span className="profile-page__label">Gender</span>
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name="sex"
+                      value={profileData.gender}
+                      onChange={handleInputChange}
+                      className="profile-page__input"
+                    />
+                  ) : (
+                    <span className="profile-page__value">{profileData.sex}</span>
+                  )}
+                </div>
+                <div className="profile-page__info-row">
+                  <span className="profile-page__label">Height</span>
+                  {/* functional component */}
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name="height"
+                      value={profileData.height}
+                      onChange={handleInputChange}
+                      className="profile-page__input"
+                    />
+                  ) : (
+                    <span className="profile-page__value">{profileData.height}</span>
+                  )}
+                </div>
+                <div className="profile-page__info-row">
+                  <span className="profile-page__label">Weight</span>
+                  {/* functional component */}
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name="weight"
+                      value={profileData.weight}
+                      onChange={handleInputChange}
+                      className="profile-page__input"
+                    />
+                  ) : (
+                    <span className="profile-page__value">{profileData.weight}</span>
+                  )}
+                </div>
+                <div className="profile-page__info-row">
+                  <span className="profile-page__label">Age</span>
+                  {/* functional component */}
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name="years"
+                      value={profileData.age}
+                      onChange={handleInputChange}
+                      className="profile-page__input"
+                    />
+                  ) : (
+                    <span className="profile-page__value">{profileData.years}</span>
+                  )}
+                </div>
+                <div className="profile-page__info-row">
+                  <span className="profile-page__label">Email</span>
+                  {/* functional component */}
+                  {isEditing ? (
+                    <input
+                      type="text"
+                      name="email"
+                      value={profileData.email}
+                      onChange={handleInputChange}
+                      className="profile-page__input"
+                    />
+                  ) : (
+                    <span className="profile-page__value">{profileData.email}</span>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
             {/* functional component */}
-          {isEditing ? (
-            <button className="profile-page__save-button" onClick={handleSaveClick}>
-              Save
-            </button>
-          ) : (
-            <button className="profile-page__edit-button" onClick={handleEditClick}>
-              Edit Profile
-            </button>
-          )}
-        </div>
-      </Container>
-    </div>
+            {isEditing ? (
+              <button className="profile-page__save-button" onClick={handleSaveClick}>
+                Save
+              </button>
+            ) : (
+              <button className="profile-page__edit-button" onClick={handleEditClick}>
+                Edit Profile
+              </button>
+            )}
+          </div>
+        </Container>
+      </div>
+    </main>
   );
 };
 
