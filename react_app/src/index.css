@@ -79,10 +79,11 @@ select {
 /*
   7. Avoid text overflows
 */
-a{
+a {
   color: white;
   text-decoration: none;
 }
+
 p,
 h1,
 h2,
@@ -101,8 +102,12 @@ h6 {
   isolation: isolate;
 }
 
+main {
+  padding-top: 4.5rem;
+}
+
 /* General App Styles */
-.container{
+.container {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -128,9 +133,11 @@ you can check the HTML structure and code of header in -> ./components/structure
   padding: 1.5rem;
   color: var(--white);
   background-color: var(--dark-green);
+  position: fixed;
+  width: 100%;
 }
 
-.header_inner{
+.header_inner {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -147,6 +154,12 @@ you can check the HTML structure and code of header in -> ./components/structure
   /* Adjust font size for better responsiveness */
 }
 
+.home__first-title,
+.home__description {
+  margin: 1.5rem;
+  text-align: center;
+}
+
 /* Form Styles */
 /* .form {
 
@@ -160,15 +173,11 @@ you can check the HTML structure and code of header in -> ./components/structure
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:0.5rem;
+  gap: 0.5rem;
 }
 
-.form-field label{
+.form-field label {
   font-weight: 700;
-}
-
-.form-field.wide-field {
-  border-bottom: 0.06rem solid var(--black);
 }
 
 /* Button Group Styles */
@@ -210,6 +219,25 @@ you can check the HTML structure and code of header in -> ./components/structure
   flex-direction: column;
 }
 
+.button-container {
+  padding: 0;
+  border: none;
+}
+
+.calculate-button {
+  width: 100%;
+  padding: 0.8rem;
+  min-width: 5rem;
+  cursor: pointer;
+  border: 0.06rem solid var(--color-light-text);
+  background-color: var(--light-green);
+  border-radius: var(--main-corner-radius-small);
+  transition: background-color 0.3s linear;
+  color: var(--white);
+}
+.calculate-button:hover{
+  background-color: var(--dark-green);
+}
 
 @media screen and (min-width: 48rem) {
   .valera .button-group {
@@ -218,7 +246,11 @@ you can check the HTML structure and code of header in -> ./components/structure
 }
 
 @media screen and (min-width: 64rem) {
-  .app-container{
+
+  .button-container {
+    padding: 0;
+  }
+  .app-container {
     padding: 2rem;
   }
 
@@ -226,6 +258,7 @@ you can check the HTML structure and code of header in -> ./components/structure
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+    margin: 0 1.5rem;
   }
 
   .form-field {
@@ -237,5 +270,10 @@ you can check the HTML structure and code of header in -> ./components/structure
   .form-field.wide-field {
     grid-column: 1/3;
     padding: 2rem;
+  }
+  .button-container {
+    padding: 0;
+    border: none;
+    grid-column: 1/3;
   }
 }

@@ -17,6 +17,10 @@ function Form() {
     });
     console.log(JSON.stringify(formData))
   };
+  const handleFormSubmit = (e) =>{
+    e.preventDefault();
+    console.log(e)
+  }
   // useEffect(()=>{
   //   console.log(formData)
   // }, [formData])
@@ -57,6 +61,12 @@ function Form() {
         onChange={(value) => handleInputChange('activityLevel', value)} 
         classes={'wide-field'}
       />
+      <FormField classes='button-container'> 
+        <button className='calculate-button' type='submit' onClick={handleFormSubmit}>
+          Calculate
+        </button>
+      </FormField>
+      
     </form>
   );
 }

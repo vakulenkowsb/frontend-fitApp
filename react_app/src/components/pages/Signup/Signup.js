@@ -22,6 +22,7 @@ export const SignUp = () => {
   };
 
   return (
+    <main>
     <div className="signup-container">
       <div className="signup-box">
         <h1>Sign Up</h1>
@@ -69,5 +70,6 @@ export const SignUp = () => {
         </form>
       </div>
     </div>
+    </main>
   );
 };

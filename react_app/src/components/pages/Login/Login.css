@@ -1,10 +1,13 @@
 /* Styling for the container */
+.login__main{
+  padding: 0;
+}
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f9fa;
   }
   
   /* Styling for the login box */
