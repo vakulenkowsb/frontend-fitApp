@@ -50,36 +50,38 @@ export const Login = () => {
           // Items with functionality will be signed as "functional item" a line above. (you can only edit className of those items)
 
           <main className="login__main">
-               <div className="login-container">
-                    <div className="login-box">
-                         <h1>Login</h1>
+               <div className="login__container">
+                    <h1 className="login__title">Login</h1>
+                    <div className="login__card">
                          <form>
-                              <div className="input-group">
-                                   <label>user name</label>
+                              <div className="login__input">
+                              <div className="input-login">
+                                   <label>Login</label>
                                    {/* Functional item */}
                                    <input value={formData.userName} onChange={(e) => setFormData({ userName: e.target.value })} type="text" />
                               </div>
 
-                              <div className="input-group">
+                              <div className="input-password">
                                    <label>Password</label>
-                                   <div className="password-group">
-                                        {/* Functional item */}
-                                        <input value={formData.password} onChange={(e) => setFormData({ password: e.target.value })} type="password" />
-                                        <a href="#" className="reset-password">Reset Password</a>
-                                   </div>
+                                        <div className="container__reset-password">
+                                             <input value={formData.password} onChange={(e) => setFormData({ password: e.target.value })} type="password" />
+                                             <a href="#" className="reset__password">Reset Password?</a>
+                                        </div>
                               </div>
-
-                              {/* Functional item */}
-                              <button type="submit" className="login-button" onClick={doLogin}>Login</button>
-
-                              <p className="signup-text">
-                                   Don’t have an account? <a href="/signup" className="signup-link">Sign Up</a>
-                              </p>
 
                               {/* Functional item */}
                               {errorMessage ?
                                    <div className="error">{errorMessage}</div>
                                    : null}
+                      
+                              {/* Functional item */}
+                              <button type="submit" className="login__button" onClick={doLogin}>Login</button>
+                              </div>
+                              <p className="signup__text">
+                                   Don’t have an account? <a href="/signup" className="signup-link">Sign Up</a>
+                              </p>
+
+                              
                          </form>
                     </div>
                </div>
