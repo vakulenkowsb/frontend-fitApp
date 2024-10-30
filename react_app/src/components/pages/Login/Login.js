@@ -10,10 +10,10 @@ export const Login = () => {
      const [formData, setFormData] = useReducer((formData, newItem) => { return ({ ...formData, ...newItem }) }, { userName: "", password: "" })
      const [errorMessage, setErrorMessage] = useState(null)
 
-     const doLogin = async () => {
+     const doLogin = async (e) => {
 
           try {
-
+               e.preventDefault()
                await login(formData.userName, formData.password)
                navigate("/profile")
 
