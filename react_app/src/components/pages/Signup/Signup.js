@@ -64,7 +64,7 @@ export const SignUp = () => {
 
           </div>
 
-          <p className="login-text">
+          <p className="signup__text">
             Already have an account? <a href="/login" className="signup__text">Log In</a>
           </p>
 

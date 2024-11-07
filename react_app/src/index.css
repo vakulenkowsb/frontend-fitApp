@@ -1,7 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-/*
-Po prukoly tymchasowo ˆˆˆˆˆˆˆˆˆˆˆˆˆ
-*/
+/* roboto-condensed-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 200;
+  src: url('fonts/roboto-condensed-v27-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/roboto-condensed-v27-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/roboto-condensed-v27-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/roboto-condensed-v27-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/roboto-condensed-v27-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/roboto-condensed-v27-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/roboto-condensed-v27-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 :root {
   --main-text-color:rgba(0, 0, 0, 1);
@@ -16,9 +68,15 @@ Po prukoly tymchasowo ˆˆˆˆˆˆˆˆˆˆˆˆˆ
   --background-unactive-button-color:rgba(255, 255, 255, 1);
   --text-color-active-buttons:rgba(255, 255, 255, 1);
   --calculate-button-hover:rgba(37, 66, 34, 1);
+  --background-wanted-itemd:rgb(69, 79, 69);
+  --background-unwanted-item:rgb(188, 139, 139);
+  --background-wanted-item--selected:rgb(25, 94, 18);
+  --background-unwanted-item--selected:rgb(163, 0, 0);
 
   --backgroud-container-color: rgba(247, 247, 247, 1);
   --color-text-empty: rgba(165, 153, 153, 1);
+
+  --ff:"Roboto Condensed", sans serif;
   
 
   --corner-radius-outside-elements: 0.75rem;
@@ -52,7 +110,7 @@ Po prukoly tymchasowo ˆˆˆˆˆˆˆˆˆˆˆˆˆ
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--ff);
   background-color: var(--background-color);
   color:var(--main-text-color)
 }

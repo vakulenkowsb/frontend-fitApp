@@ -1,7 +1,6 @@
 /* FitAppCalorieIntake.css */
 .calorie-intake{
   margin-top: 5rem;
-  width: 100;
   position: relative;
 }
 .calorie-intake__inner {
@@ -13,7 +12,7 @@
   align-items: center;
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--backgroud-container-color);
 }
 
 .calorie-intake__title {
@@ -67,26 +66,23 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  color: white;
+  color: var(--background-unactive-button-color);
 }
 
 .calorie-intake__wanted-item{
-  background-color: var(--dark-green);
+  background-color: rgb(69, 79, 69);
 }
 .calorie-intake__unwanted-item{
-  background-color: #CBCBCB;
-}
-.calorie-intake__unwanted-item{
-  background-color: #d0d0d0;
+  background-color: rgb(188, 139, 139);
 }
 
 .calorie-intake__wanted-item--selected {
-  background-color: var(--light-green);
+  background-color: var(--background-wanted-item--selected);
   
 }
 
 .calorie-intake__unwanted-item--selected {
-  background-color: red;
+  background-color: var(--background-unwanted-item--selected);
 }
 
 .calorie-intake__input {
@@ -94,15 +90,15 @@
   padding: 10px;
   width: 80%;
   max-width: 600px;
-  border: 1px solid #ccc;
+  border: 1px solid var();
   border-radius: 5px;
 }
 
 .calorie-intake__button {
   margin-top: 20px;
   padding: 12px 30px;
-  background-color: var(--light-green);
-  color: white;
+  background-color: var();
+  color: var();
   border: none;
   border-radius: 5px;
   cursor: pointer;
