@@ -61,6 +61,7 @@ const CreateRecipe = () => {
       <div className="calorie-intake">
         <Container>
           <div className='calorie-intake__inner'>
+            
             <h1 className="calorie-intake__title">Your daily calorie intake</h1>
             <p className="calorie-intake__amount">3200 calories</p>
 

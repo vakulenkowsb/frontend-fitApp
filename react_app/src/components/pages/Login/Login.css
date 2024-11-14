@@ -1,13 +1,10 @@
 /* Styling for the container */
-.login__main {
-  padding: 0;
-}
+
 
 .login__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100svh;
   flex-direction: column;
 }
 
@@ -29,6 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: left;
 }
 
 .input-login, .input-password{
@@ -38,18 +36,10 @@
   gap: 0.5rem;
 }
 
-.input-login input{
+.input-login input, .input-password input{
   border: 0.06rem solid var(--border-color-buttons);
   background-color: var(--background-unactive-button-color);
   border-radius: var(--corner-radius-inside-elements);
-  padding: 0.8rem;
-}
-
-.input-password input{
-  border: 0;
-  border-radius: var(--corner-radius-inside-elements);
-  background-color: var(--background-unactive-button-color);
-  flex: 1 1;
   padding: 0.8rem;
 }
 
@@ -62,7 +52,7 @@
 
 }
 .reset__password{
-  margin-right: 0.8rem;
+  font-weight: 300;
 }
 
 .login__button{

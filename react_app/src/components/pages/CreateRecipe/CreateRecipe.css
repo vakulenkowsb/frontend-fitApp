@@ -10,20 +10,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   font-family: Arial, sans-serif;
   background-color: var(--backgroud-container-color);
+  padding: 1rem;
 }
 
 .calorie-intake__title {
   font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 700;
+  padding: 1rem;
 }
 
 .calorie-intake__amount {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .calorie-intake__sections {
@@ -31,6 +35,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 900px;
+  padding: 1rem;
 }
 
 .calorie-intake__section {

@@ -59,8 +59,8 @@
   --main-text-color:rgba(0, 0, 0, 1);
 
   --background-color: rgba(255, 255, 255, 1);
-  --background-header-color: rgb(225 225 225);
-  --header-text-color:rgb(0, 0, 0);
+  --background-header-color: rgb(0, 71, 21);
+  --header-text-color:rgb(255, 255, 255);
   --border-color:rgba(0, 0, 0, 1);
 
   --border-color-buttons:rgba(165, 153, 153, 1);
@@ -163,7 +163,8 @@ h6 {
 }
 
 main {
-  padding-top: 3rem;
+  padding-top: 5rem;
+  min-height: 100svh;
 }
 
 /* General App Styles */
@@ -200,7 +201,7 @@ you can check the HTML structure and code of header in -> ./components/structure
   flex-direction: row;
   justify-content: flex-end;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 400;
   padding: var(--spacing-sm);
 }
 
@@ -252,6 +253,7 @@ you can check the HTML structure and code of header in -> ./components/structure
 .button-group {
   display: flex;
   gap: 0.8rem;
+  flex-direction: column;
 }
 
 .button-group button {
@@ -310,6 +312,9 @@ you can check the HTML structure and code of header in -> ./components/structure
   .valera .button-group {
     flex-direction: row;
   }
+  .button-group{
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 64rem) {
@@ -332,6 +337,10 @@ you can check the HTML structure and code of header in -> ./components/structure
     border: 0.06rem solid var(--border-color);
     border-radius: var(--corner-radius-outside-elements);
     padding: 4rem 2rem;
+  }
+  
+  .button-group{
+    flex-direction: row;
   }
 
   .form-field.wide-field {
