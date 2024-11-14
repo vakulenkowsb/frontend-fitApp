@@ -4,11 +4,6 @@ import './AboutPage.css';
 export const About = () => {
   return (
     <div className="pageContainer">
-      <header className="header">
-        <div className="navItem">Home</div>
-        <div className="navItem">About</div>
-        <div className="navItem">Log in</div>
-      </header>
     
       <main className="mainPadding">
       <div className="mainContent">
