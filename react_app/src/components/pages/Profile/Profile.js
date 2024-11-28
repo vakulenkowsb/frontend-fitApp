@@ -16,21 +16,17 @@ const Profile = () => {
   const [isEditing, setIsEditing] = useState(false); // Edit mode toggle
   const [loading, setLoading] = useState(true); // Loading state
 
-  // Fetch profile data from the API when the component mounts
+  // Load profile data from sessionStorage when the component mounts
   useEffect(() => {
-    const fetchProfileData = async () => {
-      try {
-        const response = await fetch('https://your-api-route/profile'); // Replace with actual API route
-        const data = await response.json();
-        setProfileData(data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching profile data:', error);
-        setLoading(false); // Ensure loading is stopped even if there's an error
-      }
-    };
-
-    fetchProfileData();
+    const storedUserData = sessionStorage.getItem("user");
+    
+    if (storedUserData) {
+      setProfileData(JSON.parse(storedUserData)); // Set profile data from sessionStorage
+    } else {
+      // If no data in sessionStorage, set loading to false without fetching
+      console.warn("No user data found in sessionStorage.");
+    }
+    setLoading(false); // Stop loading after retrieving data from sessionStorage
   }, []);
 
   const handleInputChange = (e) => {
@@ -45,25 +41,11 @@ const Profile = () => {
     setIsEditing(!isEditing);
   };
 
-  const handleSaveClick = async (e) => {
+  const handleSaveClick = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('https://your-api-route/profile', {
-        method: 'PUT', // Assuming you're using PUT for updating profile data
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(profileData),
-      });
-      if (response.ok) {
-        console.log('Profile updated successfully');
-        setIsEditing(false); // Exit edit mode after saving
-      } else {
-        console.error('Error updating profile:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error saving profile data:', error);
-    }
+    sessionStorage.setItem("user", JSON.stringify(profileData)); // Save updated data to sessionStorage
+    setIsEditing(false); // Exit edit mode after saving
+    console.log("Profile updated successfully in sessionStorage");
   };
 
   if (loading) {
@@ -93,18 +75,17 @@ const Profile = () => {
                   {isEditing ? (
                     <input
                       type="text"
-                      name="sex"
+                      name="gender"
                       value={profileData.gender}
                       onChange={handleInputChange}
                       className="profile-page__input"
                     />
                   ) : (
-                    <span className="profile-page__value">{profileData.sex}</span>
+                    <span className="profile-page__value">{profileData.gender}</span>
                   )}
                 </div>
                 <div className="profile-page__info-row">
                   <span className="profile-page__label">Height</span>
-                  {/* functional component */}
                   {isEditing ? (
                     <input
                       type="text"
@@ -119,7 +100,6 @@ const Profile = () => {
                 </div>
                 <div className="profile-page__info-row">
                   <span className="profile-page__label">Weight</span>
-                  {/* functional component */}
                   {isEditing ? (
                     <input
                       type="text"
@@ -134,22 +114,20 @@ const Profile = () => {
                 </div>
                 <div className="profile-page__info-row">
                   <span className="profile-page__label">Age</span>
-                  {/* functional component */}
                   {isEditing ? (
                     <input
                       type="text"
-                      name="years"
+                      name="age"
                       value={profileData.age}
                       onChange={handleInputChange}
                       className="profile-page__input"
                     />
                   ) : (
-                    <span className="profile-page__value">{profileData.years}</span>
+                    <span className="profile-page__value">{profileData.age}</span>
                   )}
                 </div>
                 <div className="profile-page__info-row">
                   <span className="profile-page__label">Email</span>
-                  {/* functional component */}
                   {isEditing ? (
                     <input
                       type="text"
@@ -164,7 +142,6 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            {/* functional component */}
             {isEditing ? (
               <button className="profile-page__save-button" onClick={handleSaveClick}>
                 Save
