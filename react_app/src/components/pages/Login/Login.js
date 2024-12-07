@@ -1,3 +1,4 @@
+
 import { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthData } from "../../../auth/AuthWrapper"
@@ -10,10 +11,10 @@ export const Login = () => {
      const [formData, setFormData] = useReducer((formData, newItem) => { return ({ ...formData, ...newItem }) }, { userName: "", password: "" })
      const [errorMessage, setErrorMessage] = useState(null)
 
-     const doLogin = async () => {
-
+     const doLogin = async (e) => {
+          e.preventDefault();
           try {
-
+               console.log("Form Data:", formData)
                await login(formData.userName, formData.password)
                navigate("/profile")
 

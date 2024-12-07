@@ -15,7 +15,7 @@ export const SignUp = () => {
     e.preventDefault();
     try {
       await signUp(formData.userName, formData.password);
-      navigate("/profile");
+      navigate("/login");
     } catch (error) {
       setErrorMessage(error);
     }
@@ -40,11 +40,7 @@ export const SignUp = () => {
           <div className="input-group">
             <label>Password</label>
             {/* Functional item */}
-            <input
-              value={formData.password}
-              onChange={(e) => setFormData({ password: e.target.value })}
-              type="password"
-            />
+           
           </div>
           <div className="input-group">
             <label>Password</label>
