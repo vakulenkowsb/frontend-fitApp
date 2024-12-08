@@ -1,64 +1,112 @@
-/* Container for profile page */
-.profile-page {
-  position: relative;
+Container for profile page
+.profile {
+  position: absolute;
 }
 
-.profile-page__inner {
-  background-color: #f9f9f9;
+.profile-page {
   width: 90%;
-  display: flex;
-  align-items: center;
   margin: 0 auto;
 }
 
-.profile-page__photo-section {
+.profile-container {
+  background-color: #f9f9f9; /*#f9f9f9*/
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 20px 65px;
+  margin-bottom: 5px;
+}
+
+.profile-container__photo-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 30%;
+  margin-right: 62px;
 }
 
-.profile-page__photo {
-  width: 150px;
+.profile-container__photo {
   height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 150px;
+  border-radius: 6%;
+  object-fit: cover; /* scalw and save proportion*/
+  margin-bottom: 20px;
 }
 
-.profile-page__name {
-  font-size: 24px;
+.profile-container__title {
   font-weight: bold;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.profile-page__upload {
-  margin-top: 5px;
-  color: #555;
+.profile-container__upload {
   background: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #A59999;
   border: none;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.profile-page__details {
-  width: 100%;
-  margin-top: 20px;
+.profile-container__description-section {
+  width: 70%;
 }
 
-.profile-page__details-title {
-  font-size: 20px;
+.profile-container__description-title {
   font-weight: bold;
   text-align: center;
 }
 
-.profile-page__info {
+.profile-container__info {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 }
 
-.profile-page__info-row {
+.profile-container__info-row {
+  margin-bottom: 15px;
+  border-bottom: 1px solid;
+}
+
+.profile-container__info-title {
+  color: #A59999;
+  font-size: 20px;
+}
+
+.profile-container__info-input {
+  font-weight: 500;
+}
+
+.profile-container__info-value {
+  font-weight: 500;
+}
+
+.edit-container {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid
+  float: right;
+}
+
+.edit-container__save-mode {
+  background-color: #99CC66;
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: bold;
+  width: 200px;
+  height: 62px;
+  border: none;
+  border-radius: 6%;
+  cursor: pointer;
+}
+
+.edit-container__edit-mode {
+  background-color: #99CC66;
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: bold;
+  width: 200px;
+  height: 62px;
+  border: none;
+  border-radius: 6%;
+  cursor: pointer;
 }
