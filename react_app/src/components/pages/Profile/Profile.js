@@ -65,7 +65,7 @@ const Profile = () => {
                   className="profile-container__photo"
                 />
                 <h2 className='profile-container__title'>
-                  Ask/search mistake, why not see user name!
+                  leBrine Jakson
                   {profileData.name}
                 </h2>
                 <button className='profile-container__upload'>
@@ -193,13 +193,13 @@ const Profile = () => {
             <div className='edit-container'>
               {isEditing ?
                 (
-                  <button className='edit-container__save-mode' onClick={handleSaveClick}>
+                  <button className='edit-container__save-mode btn' onClick={handleSaveClick}>
                     Save
                   </button>
                 ) 
                 : 
                 (
-                  <button className='edit-container__edit-mode' onClick={handleEditClick}>
+                  <button className='edit-container__edit-mode btn' onClick={handleEditClick}>
                     Edit profile
                   </button>
                 )
