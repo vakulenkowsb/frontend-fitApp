@@ -1,108 +1,75 @@
 /* Styling for the container */
-.login__main{
-  padding: 0;
+
+
+.login__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Styling for the login box */
-  .login-box {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  /* Styling for the form inputs */
-  .input-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .input-group label {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  
-  .password-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .password-group input {
-    width: calc(100% - 100px);
-  }
-  
-  .reset-password {
-    font-size: 12px;
-   color: var(--light-green);
-    text-decoration: none;
-  }
-  
-  .reset-password:hover {
-    text-decoration: underline;
-  }
-  
-  /* Styling for the login button */
-  .login-button {
-    background-color: var(--light-green);
-    color: white;
-    padding: 12px;
-    border: none;
-    width: 100%;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .login-button:hover {
-    background-color: #7cb342;
-  }
-  
-  /* Signup text */
-  .signup-text {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-  
-  .signup-link {
-   color: var(--light-green);
-    text-decoration: none;
-  }
-  
-  .signup-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .login-box {
-      padding: 20px;
-    }
-  
-    .login-button {
-      font-size: 14px;
-    }
-  }
-  
+
+/* Styling for the login box */
+.login__card {
+  background-color: #fff;
+  padding: 3rem 3rem 0 3rem;
+  margin: 2rem;
+  border-radius: var(--corner-radius-outside-elements);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 30rem;
+}
+
+/* Styling for the form inputs */
+.login__input{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.input-login, .input-password{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-login input, .input-password input{
+  border: 0.06rem solid var(--border-color-buttons);
+  background-color: var(--background-unactive-button-color);
+  border-radius: var(--corner-radius-inside-elements);
+  padding: 0.8rem;
+}
+
+.container__reset-password{
+  border: 0.06rem solid var(--border-color-buttons);
+  background-color: var(--background-unactive-button-color);
+  border-radius: var(--corner-radius-inside-elements);
+  display: flex;
+  align-items: center;
+
+}
+.reset__password{
+  font-weight: 300;
+}
+
+.login__button{
+  color:var(--text-color-active-buttons);
+  border-radius: var(--corner-radius-inside-elements);
+  padding: 0.8rem;
+  border: 0;
+  background-color: var(--background-active-button-color)
+}
+
+.signup__text{
+  margin: 1.5rem 0;
+  color:var(--color-text-empty);
+}
+.signup__text a{
+  color: var(--background-active-button-color);
+}
+.error{
+  text-align: left;
+}

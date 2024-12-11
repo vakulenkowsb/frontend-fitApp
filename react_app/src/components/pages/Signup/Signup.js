@@ -23,11 +23,12 @@ export const SignUp = () => {
 
   return (
     <main>
-    <div className="signup-container">
-      <div className="signup-box">
-        <h1>Sign Up</h1>
+    <div className="signup__container">
+        <h1 class="signup__main-title">Sign Up</h1>
+        <div className="signup__card">
         <form>
-          <div className="input-group">
+          <div className="login__input">
+          <div className="input-login">
             <label>Username</label>
             {/* Functional item */}
             <input
@@ -37,7 +38,7 @@ export const SignUp = () => {
             />
           </div>
 
-          <div className="input-group">
+          <div className="input-login">
             <label>Password</label>
             {/* Functional item */}
             <input
@@ -46,7 +47,7 @@ export const SignUp = () => {
               type="password"
             />
           </div>
-          <div className="input-group">
+          <div className="input-login">
             <label>Password</label>
             {/* Functional item */}
             <input
@@ -57,12 +58,14 @@ export const SignUp = () => {
           </div>
 
           {/* Functional item */}
-          <button type="submit" className="signup-button" onClick={doSignUp}>
+          <button type="submit" className="signup-button login__button" onClick={doSignUp}>
             Sign Up
           </button>
 
-          <p className="login-text">
-            Already have an account? <a href="/login" className="login-link">Log In</a>
+          </div>
+
+          <p className="signup__text">
+            Already have an account? <a href="/login" className="signup__text">Log In</a>
           </p>
 
           {/* Functional item */}
