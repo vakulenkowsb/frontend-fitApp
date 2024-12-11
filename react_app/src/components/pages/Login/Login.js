@@ -49,7 +49,7 @@ export const Login = () => {
           // you can change the html structure and all the css styles here, but don't touch functionality of the items
           // Items with functionality will be signed as "functional item" a line above. (you can only edit className of those items)
 
-          <main>
+          <main className="login__main">
                <div className="login__container">
                     <h1 className="login__title">Login</h1>
                     <div className="login__card">

@@ -1,3 +1,7 @@
+.main__about{
+  background: linear-gradient(135deg, #e6f0e6, #cce5cc);
+}
+
 .pageContainer {
   font-family: 'Inter', sans-serif;
   color: #333;
@@ -5,8 +9,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #e6f0e6, #cce5cc);
-  padding: 2rem 1rem;
+  margin: 0 var(--spacing-lg);
 }
 
 .mainContent {

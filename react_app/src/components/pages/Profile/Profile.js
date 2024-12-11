@@ -53,7 +53,7 @@ const Profile = () => {
   }
 
   return (
-    <main>
+    <main className='profile__main'>
       <div className = "profile">
         <Container>
           <div className='profile-page'>
@@ -65,8 +65,8 @@ const Profile = () => {
                   className="profile-container__photo"
                 />
                 <h2 className='profile-container__title'>
-                  leBrine Jakson
-                  {profileData.name}
+                  {/* leBrine Jakson */}
+                  {profileData.username}
                 </h2>
                 <button className='profile-container__upload'>
                   Upload new photo

@@ -194,6 +194,7 @@ you can check the HTML structure and code of header in -> ./components/structure
   background-color: var(--background-header-color);
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .header_inner {

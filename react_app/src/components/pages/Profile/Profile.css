@@ -1,6 +1,12 @@
-Container for profile page
+
+.profile__main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
 .profile {
-  position: absolute;
 }
 
 .profile-page {

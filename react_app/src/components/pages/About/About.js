@@ -4,8 +4,8 @@ import Container from '../../Container'; // Assuming you have this reusable Cont
 
 export const About = () => {
   return (
-    <div className="pageContainer">
-      <main className="mainPadding">
+    <main className="main__about">
+      <div className="pageContainer">
         <div className="mainContent">
           <div className="textSection">
             <h1 className="heading">Get Start Now</h1>
@@ -39,13 +39,13 @@ export const About = () => {
           </div>
         </div>
 
-       
+
         <HowItWorks />
         <FAQ />
         <Testimonials />
-        <AboutUs /> 
-      </main>
-    </div>
+        <AboutUs />
+        </div>
+    </main>
   );
 };
 
@@ -140,9 +140,9 @@ function AboutUs() {
 
 function Lol() {
   return (
-  <section className="LolSection">
-    <h2>asdasd</h2>
-    <p>asdasdasd</p>
-  </section>
+    <section className="LolSection">
+      <h2>asdasd</h2>
+      <p>asdasdasd</p>
+    </section>
   );
 }

@@ -22,7 +22,7 @@ export const SignUp = () => {
   };
 
   return (
-    <main>
+    <main className="signup__main">
     <div className="signup__container">
         <h1 class="signup__main-title">Sign Up</h1>
         <div className="signup__card">
