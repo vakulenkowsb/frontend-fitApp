@@ -108,3 +108,81 @@
   cursor: pointer;
   font-size: 1rem;
 }
+
+
+@media (max-width: 768px) {
+  .calorie-intake__inner {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .calorie-intake__sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .calorie-intake__section {
+    width: 90%;
+  }
+
+  .calorie-intake__items {
+    justify-content: center;
+  }
+
+  .calorie-intake__input {
+    width: 95%;
+  }
+
+  .calorie-intake__button {
+    width: 95%;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .calorie-intake__inner {
+    width: 95%;
+  }
+
+  .calorie-intake__sections {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .calorie-intake__section {
+    width: 45%;
+  }
+
+  .calorie-intake__items {
+    gap: 8px;
+  }
+
+  .calorie-intake__input {
+    width: 90%;
+  }
+
+  .calorie-intake__button {
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .calorie-intake__inner {
+    width: 80%;
+  }
+
+  .calorie-intake__sections {
+    gap: 30px;
+  }
+
+  .calorie-intake__input {
+    width: 80%;
+  }
+
+  .calorie-intake__button {
+    padding: 15px 40px;
+  }
+}
+
