@@ -1,9 +1,9 @@
 .main__about{
-  background: linear-gradient(135deg, #e6f0e6, #cce5cc);
+  background: var(--background-main-color-page-about);
 }
 
 .pageContainer {
-  font-family: 'Inter', sans-serif;
+  --ff:"Roboto Condensed", sans serif;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   width: 100%;
   background-color: #fff;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius:   0.75rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
 }
@@ -32,7 +32,7 @@
 .heading {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #254222;
+  --background-header-color: rgb(0, 71, 21);
   margin-bottom: 1.5rem;
   border-bottom: 2px solid #99cc66;
   padding-bottom: 0.5rem;

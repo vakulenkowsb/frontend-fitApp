@@ -62,7 +62,8 @@
   --background-header-color: rgb(0, 71, 21);
   --header-text-color:rgb(255, 255, 255);
   --border-color:rgba(0, 0, 0, 1);
-
+  --background-main-color-page-about: linear-gradient(135deg, #e6f0e6, #cce5cc);
+  
   --border-color-buttons:rgba(165, 153, 153, 1);
   --background-active-button-color: rgba(153, 204, 102, 1);
   --background-unactive-button-color:rgba(255, 255, 255, 1);
