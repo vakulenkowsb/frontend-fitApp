@@ -18,7 +18,7 @@
   padding: 3rem 3rem 0 3rem;
   margin: 2rem;
   border-radius: var(--corner-radius-outside-elements);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadows-for-main-fields);
   text-align: center;
   width: 100%;
   max-width: 30rem;

@@ -1,189 +1,112 @@
-/* FitAppCalorieIntake.css */
-.calorie-intake{
-  margin-top: 5rem;
-  position: relative;
-}
-.calorie-intake__inner {
-  width: 90%;
-  border-radius: 12px;
-  margin: 0 auto;
+.recipe-main {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
+}
+
+.recipe-creation__container {
+  max-width: 70rem;
+  text-align: center;
+  margin: var(--spacing-md);
+  padding: var(--spacing-md);
   background-color: var(--backgroud-container-color);
-  padding: 1rem;
+  border-radius: var(--corner-radius-outside-elements);
+  box-shadow: var(--shadows-for-main-fields);
 }
 
-.calorie-intake__title {
-  font-size: 2rem;
-  font-weight: 700;
-  padding: 1rem;
+.recipe-creation__title {
+  padding: var(--spacing-md) 0;
 }
 
-.calorie-intake__amount {
-  font-size: 1.2rem;
-  padding: 1rem 0;
-  width: 100%;
-  text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+.recipe-creation__calories {
+  padding: var(--spacing-xs) 0;
+  border-top: var(--border-size) var(--border-color) solid;
+  border-bottom: var(--border-size) var(--border-color) solid;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color:var(--calories-text-color);
 }
 
-.calorie-intake__sections {
+.recipe-creation__sections {
+  margin: var(--spacing-lg);
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.recipe-creation__section {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
-  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.calorie-intake__section {
-  width: 45%;
+.recipe-creation__section-title {
+  margin-bottom: var(--spacing-md);
+}
+
+.recipe-creation__item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xs);
+}
+
+.recipe-creation__item {
+  max-width: 5rem;
+  padding: 0.8rem;
+  min-width: 5rem;
+  cursor: pointer;
+  border: 0.06rem solid var(--border-color-buttons);
+  border-radius: var(--corner-radius-inside-elements);
+  transition: background-color 0.3s ease;
+  color:var(--text-color-active-buttons);
+}
+
+.recipe-creation__liked-item{
+  background-color: var(--background-wanted-itemd);
+}
+.recipe-creation__disliked-item{
+  background-color: var(--background-unwanted-item);
+}
+
+.recipe-creation__section-calculate {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: var(--spacing-sm);
 }
 
-/* .calorie-intake__section--products {
-  background-color: #e0f7e9;
+.recipe-creation__input{
+  padding: var(--spacing-sm);
+  border-radius: var(--corner-radius-inside-elements);
+  border: 0;
+  box-shadow: var(--shadows-for-main-fields);
 }
 
-.calorie-intake__section--allergens {
-  background-color: #ffe4e4;
-} */
-
-.calorie-intake__section-title {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.calorie-intake__items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.calorie-intake__item {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+.recipe-creation__create-button {
+  width: 100%;
+  padding: 0.8rem;
+  min-width: 5rem;
   cursor: pointer;
-  transition: background-color 0.3s;
-  color: var(--background-unactive-button-color);
+  background-color: var(--background-active-button-color);
+  border: 0;
+  transition: background-color 0.3s linear;
+  color: var(--text-color-active-buttons);
+  border-radius: var(--corner-radius-inside-elements);
 }
 
-.calorie-intake__wanted-item{
-  background-color: rgb(69, 79, 69);
-}
-.calorie-intake__unwanted-item{
-  background-color: rgb(188, 139, 139);
-}
-
-.calorie-intake__wanted-item--selected {
-  background-color: var(--background-wanted-item--selected);
-  
-}
-
-.calorie-intake__unwanted-item--selected {
-  background-color: var(--background-unwanted-item--selected);
-}
-
-.calorie-intake__input {
-  margin-top: 20px;
-  padding: 10px;
-  width: 80%;
-  max-width: 600px;
-  border: 1px solid var();
-  border-radius: 5px;
-}
-
-.calorie-intake__button {
-  margin-top: 20px;
-  padding: 12px 30px;
-  background-color: var();
-  color: var();
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-
-@media (max-width: 768px) {
-  .calorie-intake__inner {
-    width: 100%;
-    padding: 0.5rem;
+@media screen and (min-width: 48rem) {
+  .recipe-creation__item-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
-  .calorie-intake__sections {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .calorie-intake__section {
-    width: 90%;
-  }
-
-  .calorie-intake__items {
-    justify-content: center;
-  }
-
-  .calorie-intake__input {
-    width: 95%;
-  }
-
-  .calorie-intake__button {
-    width: 95%;
+  .recipe-creation__container{
+    min-width: 40rem;
   }
 }
 
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .calorie-intake__inner {
-    width: 95%;
+@media screen and (min-width: 64rem) {
+  .recipe-creation__sections{
+    grid-auto-flow: column;
   }
-
-  .calorie-intake__sections {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .calorie-intake__section {
-    width: 45%;
-  }
-
-  .calorie-intake__items {
-    gap: 8px;
-  }
-
-  .calorie-intake__input {
-    width: 90%;
-  }
-
-  .calorie-intake__button {
-    width: auto;
+  .recipe-creation__item-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-
-@media (min-width: 1200px) {
-  .calorie-intake__inner {
-    width: 80%;
-  }
-
-  .calorie-intake__sections {
-    gap: 30px;
-  }
-
-  .calorie-intake__input {
-    width: 80%;
-  }
-
-  .calorie-intake__button {
-    padding: 15px 40px;
-  }
-}
-

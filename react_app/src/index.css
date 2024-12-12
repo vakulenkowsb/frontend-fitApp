@@ -61,6 +61,7 @@
   --background-color: rgba(255, 255, 255, 1);
   --background-header-color: rgb(0, 71, 21);
   --header-text-color:rgb(255, 255, 255);
+  --calories-text-color:rgb(0 143 39);
   --border-color:rgba(0, 0, 0, 1);
 
   --border-color-buttons:rgba(165, 153, 153, 1);
@@ -75,6 +76,7 @@
 
   --backgroud-container-color: rgba(247, 247, 247, 1);
   --color-text-empty: rgba(165, 153, 153, 1);
+  --shadows-for-main-fields:0 2px 5px 0px rgb(0 0 0 / 19%);
 
   --ff:"Roboto Condensed", sans serif;
   
@@ -112,7 +114,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: var(--ff);
   background-color: var(--background-color);
-  color:var(--main-text-color)
+  color:var(--main-text-color);
 }
 
 /*
@@ -237,13 +239,12 @@ you can check the HTML structure and code of header in -> ./components/structure
 /* FormField Styles */
 .form-field {
   padding: 2rem;
-  border-top: 0.06rem solid var(--border-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 2px 5px 0px rgb(0 0 0 / 19%);
+  box-shadow: var(--shadows-for-main-fields);
 }
 
 .form-field label {
@@ -252,9 +253,9 @@ you can check the HTML structure and code of header in -> ./components/structure
 
 /* Button Group Styles */
 .button-group {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
-  flex-direction: column;
 }
 
 .button-group button {
@@ -310,11 +311,11 @@ you can check the HTML structure and code of header in -> ./components/structure
 }
 
 @media screen and (min-width: 48rem) {
-  .valera .button-group {
+  .valera{
     flex-direction: row;
   }
   .button-group{
-    flex-direction: row;
+    grid-auto-flow: column;
   }
 }
 
@@ -335,7 +336,6 @@ you can check the HTML structure and code of header in -> ./components/structure
   }
 
   .form-field {
-    border: 0.06rem solid var(--border-color);
     border-radius: var(--corner-radius-outside-elements);
     padding: 4rem 2rem;
   }
@@ -354,7 +354,6 @@ you can check the HTML structure and code of header in -> ./components/structure
     grid-column: 1/3;
   }
   .calculate-button{
-    border: 0.06rem solid var(--border-color-buttons);
     border-radius: var(--corner-radius-outside-elements);
   }
 }
