@@ -3,8 +3,16 @@ services:
   react-app:
     image: node:18
     volumes:
-      - ./react_app:/app # Mapowanie bieżącego katalogu na kontener
-    working_dir: /app # Ustaw katalog roboczy na /app w kontenerze
+      - ./react_app:/app # Map the current directory to the container
+    working_dir: /app # Set the working directory in the container
     ports:
-      - "3000:3000" # Udostępnij port 3000 na hosta
-    command: sh -c "if [ -f package.json ]; then npm install && npm start; else npx create-react-app . && npm start; fi" # Sprawdzenie istnienia package.json
+      - "3000:3000" # Expose port 3000 to the host
+    command: sh -c "if [ -f package.json ]; then npm install && npm start; else npx create-react-app . && npm start; fi"
+    stdin_open: true # Keep STDIN open for testing interaction
+    tty: true # Allocate a pseudo-TTY for easier debugging
+  react-tests:
+    image: node:18
+    volumes:
+      - ./react_app:/app
+    working_dir: /app
+    command: sh -c "if [ -f package.json ]; then npm install && npm test; else echo 'No package.json found'; fi"

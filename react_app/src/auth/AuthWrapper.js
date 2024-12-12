@@ -1,14 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
-// Mock users array
-const users = [
-  { username: "bob", password: "password", jwt: "1", gender: "male", height: 200, weight: 100, age: 22, email: "bob@gmail.com" },
-  { username: "john", password: "password", jwt: "2", gender: "male", height: 180, weight: 82, age: 19, email: "john@gmail.com" },
-  { username: "michelle", password: "password", jwt: "3", gender: "female", height: 175, weight: 58, age: 30, email: "michelle@gmail.com" },
-  { username: "obeme", password: "password", jwt: "4", gender: "male", height: 190, weight: 80, age: 26, email: "obeme@gmail.com" },
-];
-
 const AuthContext = createContext();
 export const AuthData = () => useContext(AuthContext);
 
@@ -22,43 +14,69 @@ export const AuthWrapper = ({ children }) => {
     sessionStorage.setItem("user", JSON.stringify(userData));
   };
 
-  const login = (userName, password) => {
-    return new Promise((resolve, reject) => {
-      const foundUser = users.find(
-        (user) => user.username === userName && user.password === password
-      );
+  const login = async (userName, password) => {
+    console.log("username", userName)
+    console.log("password", password)
+    try {
 
-      if (foundUser) {
-        Cookies.set("jwtToken", foundUser.jwt, { secure: true, sameSite: "Strict" });
+      const response = await fetch("http://localhost:8000/api/login/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username: userName, password }),
+      });
 
-        const userData = { ...foundUser, isAuthenticated: true };
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log(data)
+        // Set JWT in cookies
+        Cookies.set("jwtToken", data.user.jwt, { secure: true, sameSite: "Strict" });
+
+        // Update user state
+        const userData = { ...data.user, isAuthenticated: true };
         setUser(userData);
         saveUserToSessionStorage(userData);
-        resolve("success");
+
+        return "success";
       } else {
-        reject("Incorrect username or password");
+        throw new Error(data.message);
       }
-    });
+    } catch (error) {
+      return error.message || "An error occurred";
+    }
   };
 
-  const signUp = (userName, password) => {
-    return new Promise((resolve, reject) => {
-      if (userName && password) {
-        const jwtToken = Math.random().toString(36).substring(2);
+  const signUp = async (userName, password) => {
+    try {
+      const response = await fetch("http://localhost:8000/api/signup/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username: userName, password }),
+      });
 
-        const newUser = { username: userName, password, jwt: jwtToken, gender: "", height: "", weight: "", age: "", email: "" };
-        users.push(newUser);
+      const data = await response.json();
 
-        Cookies.set("jwtToken", jwtToken, { secure: true, sameSite: "Strict" });
+      if (response.ok) {
+        // Set JWT in cookies
+        console.log(data)
+        // Cookies.set("jwtToken", data.user.jwt, { secure: true, sameSite: "Strict" });
 
-        const userData = { ...newUser, isAuthenticated: true };
-        setUser(userData);
-        saveUserToSessionStorage(userData);
-        resolve("success");
+        // Update user state
+        // const userData = { ...data.user, isAuthenticated: true };
+        // setUser(userData);
+        // saveUserToSessionStorage(userData);
+
+        return "success";
       } else {
-        reject("Failed to sign up");
+        throw new Error(data.message);
       }
-    });
+    } catch (error) {
+      return error.message || "An error occurred";
+    }
   };
 
   const logout = () => {
@@ -70,12 +88,8 @@ export const AuthWrapper = ({ children }) => {
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
     if (jwtToken) {
-      const foundUser = users.find((user) => user.jwt === jwtToken);
-      if (foundUser) {
-        const userData = { ...foundUser, isAuthenticated: true };
-        setUser(userData);
-        saveUserToSessionStorage(userData);
-      }
+      // Ideally, we would have an endpoint to validate the JWT and get user data
+      // For simplicity, we will skip this step in this example
     }
   }, []);
 
@@ -85,3 +99,4 @@ export const AuthWrapper = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
