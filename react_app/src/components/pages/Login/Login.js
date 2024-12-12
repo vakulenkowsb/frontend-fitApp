@@ -79,8 +79,6 @@ export const Login = () => {
                               <p className="signup__text">
                                    Don’t have an account? <a href="/signup" className="signup-link">Sign Up</a>
                               </p>
-
-
                          </form>
                     </div>
                </div>

@@ -58,13 +58,13 @@
 :root {
   --main-text-color:rgba(0, 0, 0, 1);
 
-  --background-color: rgba(255, 255, 255, 1);
+  --background-color: rgb(255, 255, 255);
   --background-header-color: rgb(0, 71, 21);
   --header-text-color:rgb(255, 255, 255);
   --border-color:rgba(0, 0, 0, 1);
 
-  --border-color-buttons:rgba(165, 153, 153, 1);
-  --background-active-button-color: rgba(153, 204, 102, 1);
+  --border-color-buttons:rgb(165, 153, 153);
+  --background-active-button-color: rgb(153, 204, 102);
   --background-unactive-button-color:rgba(255, 255, 255, 1);
   --text-color-active-buttons:rgba(255, 255, 255, 1);
   --calculate-button-hover:rgba(37, 66, 34, 1);
@@ -73,8 +73,8 @@
   --background-wanted-item--selected:rgb(25, 94, 18);
   --background-unwanted-item--selected:rgb(163, 0, 0);
 
-  --backgroud-container-color: rgba(247, 247, 247, 1);
-  --color-text-empty: rgba(165, 153, 153, 1);
+  --backgroud-container-color: rgb(247, 247, 247);
+  --color-text-empty: rgb(165, 153, 153);
 
   --ff:"Roboto Condensed", sans serif;
   
